@@ -1,0 +1,149 @@
+{% extends 'layout.html' %}
+{% block body %}
+<style>
+
+#testing1 {
+
+
+background-color:#eeeeee;
+    color:#6644dd;
+margin-left:18px;
+
+}
+
+#wholepage{
+    background-color:#eeeeee;
+
+}
+
+h2,h1,p{
+    color:#6d74c9;
+
+}
+#icon2{
+	font-size:28px;
+	}
+
+
+.list-numbered {
+  list-style: none;
+  margin-left: 1em;
+  counter-reset: line;
+}
+
+.list-numbered > li {
+  position: relative;
+ margin-bottom:0.5em;
+    color:#6495ed;
+}
+
+.list-numbered > li:before {
+	position: absolute;
+	left: -2.25em;
+	display: inline-block;
+  width: 22px;
+	height: 22px;
+	margin-right: 0.5em;
+  background-color:  #2b4353;
+	border-radius: 50%;
+	color: #fff;
+	text-align:center;
+  line-height: 1.225em;
+	counter-increment: line;
+	content: counter(line);
+}
+
+ul.imagelist {
+   list-style-image: url(http://www.webcreatorbox.com/sample/images/arrow.png);
+   margin-left:-18px;
+	}
+
+
+
+	.list-numbered {
+  list-style: none;
+  margin-left: 1em;
+  counter-reset: line;
+}
+
+.list-numbered > li {
+  position: relative;
+ margin-bottom:0.5em;
+}
+
+.list-numbered > li:before {
+	position: absolute;
+	left: -2.25em;
+	display: inline-block;
+  width: 22px;
+	height: 22px;
+	margin-right: 0.5em;
+  background-color: #7fffd4;
+	border-radius: 50%;
+	color: #6495ed;
+	text-align:center;
+  line-height: 1.25em;
+	counter-increment: line;
+	content: counter(line);
+}
+
+
+</style>
+
+
+<div id="wholepage">
+
+
+
+
+
+
+
+
+
+
+{% for publication in publications %}
+
+<div class="disease1">
+ {% if  publication.get_type() == "sdis" %}
+
+
+
+     <h2 id="testing1"> <i id="icon2" class="material-icons"> info_outline </i>  {{ publication.get_title() }} </h2>
+    <section>
+
+    <ol class="list-numbered">
+        <li>  What are the causes? </li>
+
+        <ul class="imagelist">
+            <li> {{ publication.get_cause() }} </li> </ul>
+
+
+    <li>  What are the symptoms    ? </li>
+           <ul class="imagelist">
+               <li>{{ publication.get_symptom() }} </li> </ul>
+
+    <li>   What are the treatments available? </li>
+        <ul class="imagelist">
+            <li> {{ publication.get_treatment() }} </li> </ul>
+
+       <li> What are the complications? </li>
+        <ul class="imagelist">
+            <li> {{ publication.get_complication() }} </li> </ul>
+
+             <li> What are the specialists available for this disease? </li>
+            <ul class="imagelist">
+                <li> {{ publication.get_specialist() }} </li> </ul>
+    </ol>
+
+    </section>
+ {% endif %}
+</div>
+
+{% endfor %}
+
+
+</div>
+
+
+{% endblock %}

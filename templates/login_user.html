@@ -1,0 +1,143 @@
+
+
+    <style>
+ .carousel-inner
+  {
+
+
+     height: 670px;
+ }
+	@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(1, 1);
+  }
+  to {
+    -webkit-transform: scale(1.5, 1.5);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+.carousel-inner .item > img {
+  -webkit-animation: zoom 20s;
+  animation: zoom 20s;}
+
+ ul { padding:0 }
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+
+#login_input_username{
+
+}
+}
+</style>
+
+<div>
+<br><br><br><br><br><br>
+<h1>Login</h1>
+<form action="/login" method="POST" name="login_user_form">
+  <input id="next" name="next" type="hidden" value="">
+<input id="csrf_token" name="csrf_token" type="hidden" value="IjI1NGFhZWUxYmM0NmNiMGQ5ZTY2NTY1NGVkMDUwZmNlYWY4OWJjODci.DTdt0g.eMx_bGT19c-1CZjSUh_he0tEP_8">
+  
+  <p>
+    <label for="email">Email Address</label> <input id="email" name="email" type="text" value="">
+    
+  </p>
+
+  
+  <p>
+    <label for="password">Password</label> <input id="password" name="password" type="password" value="">
+    
+  </p>
+
+  
+  <p>
+    <label for="remember">Remember Me</label> <input id="remember" name="remember" type="checkbox" value="y">
+    
+  </p>
+
+  
+  <p><input id="next" name="next" type="hidden" value=""></p>
+
+  
+  <p><input id="submit" name="submit" type="submit" value="Login"></p>
+
+</form>
+
+
+  
+    <a href="/Register">No account?</a><br/>
+    <a href="/">Return without login</a>
+  
+  
+  
+</ul>
+</div>
+

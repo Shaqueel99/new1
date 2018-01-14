@@ -1,0 +1,465 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<style>
+
+#tabby h3 {
+  color:white;
+  background-color: #428bca;
+  padding: 5px 15px;
+  margin-bottom: 0;
+}
+.colorBlue1 {
+  color:blue;
+  background-color: #08ffef;
+  padding: 15px;
+  margin: 0;
+  border-right:1px solid #4cf1ff;
+}
+.colorRed1 {
+  color:blue;
+  background-color: #08ffef;
+  padding: 15px;
+    border-right:1px solid #4cf1ff;
+}
+.colorYellow1 {
+  color:blue;
+  background-color:#08ffef;
+  padding: 15px;
+    border-right:1px solid #4cf1ff;
+}
+.colorGrey1 {
+  color: blue;
+  background-color: #08ffef;
+  padding: 15px;
+
+}
+
+
+.colorBlue2 {
+  color:blue;
+  background-color: #08ffef;
+  padding: 15px;
+  margin: 0;
+  border-right:1px solid #4cf1ff;
+}
+.colorRed2 {
+  color:blue;
+  background-color: #08ffef;
+  padding: 15px;
+    border-right:1px solid #4cf1ff;
+}
+.colorYellow2 {
+  color: blue;
+  background-color:#08ffef;
+  padding: 15px;
+    border-right:1px solid #4cf1ff;
+}
+.colorGrey2 {
+  color: blue;
+  background-color: #08ffef;
+  padding: 15px;
+
+}
+
+.colorBlue3 {
+  color:blue;
+  background-color: #08ffef;
+  padding: 15px;
+  margin: 0;
+  border-right:1px solid #4cf1ff;
+}
+.colorRed3 {
+  color:blue;
+  background-color: #08ffef;
+  padding: 15px;
+    border-right:1px solid #4cf1ff;
+}
+.colorYellow3 {
+  color: blue;
+  background-color:#08ffef;
+  padding: 15px;
+    border-right:1px solid #4cf1ff;
+}
+.colorGrey3 {
+  color: blue;
+  background-color: #08ffef;
+  padding: 15px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.Eastcolor1 {
+  color:#001EFF !important;
+  background-color: #00ff00;
+  padding: 15px;
+  margin: 0;
+  border-right:1px solid #00FF7F;
+}
+.Eastcolor2 {
+  color:#001EFF;
+  background-color: #00ff00;
+  padding: 15px;
+    border-right:1px solid #00FF7F;
+}
+.Eastcolor3 {
+  color:#001EFF;
+  background-color:#00ff00;
+  padding: 15px;
+    border-right:1px solid #00FF7F;
+}
+.Eastcolor4 {
+  color:#001EFF;
+  background-color: #00ff00;
+  padding: 15px;
+
+}
+
+
+
+
+
+.Eastcolor11 {
+  color:#001EFF;
+  background-color: #00ff00;
+  padding: 15px;
+  margin: 0;
+  border-right:1px solid #00FF7F;
+}
+.Eastcolor22 {
+  color:#001EFF;
+  background-color: #00ff00;
+  padding: 15px;
+    border-right:1px solid #00FF7F;
+}
+.Eastcolor33 {
+  color:#001EFF;
+  background-color:#00ff00;
+  padding: 15px;
+    border-right:1px solid #00FF7F;
+}
+.Eastcolor44 {
+  color: #001EFF;
+  background-color: #00ff00;
+  padding: 15px;
+
+}
+
+
+
+
+.Eastcolor111 {
+  color:#001EFF;
+  background-color: #00ff00;
+  padding: 15px;
+  margin: 0;
+  border-right:1px solid #00FF7F;
+}
+.Eastcolor222 {
+  color:#001EFF;
+  background-color: #00ff00;
+  padding: 15px;
+    border-right:1px solid #00FF7F;
+}
+.Eastcolor333 {
+  color:#001EFF;
+  background-color:#00ff00;
+  padding: 15px;
+    border-right:1px solid #00FF7F;
+}
+.Eastcolor444{
+  color: #001EFF;
+  background-color: #00ff00;
+  padding: 15px;
+
+}
+
+
+
+
+.Eastcolor1111 {
+  color:#001EFF;
+  background-color: #00ff00;
+  padding: 15px;
+  margin: 0;
+  border-right:1px solid #00FF7F;
+}
+.Eastcolor2222 {
+  color:#001EFF;
+  background-color: #00ff00;
+  padding: 15px;
+    border-right:1px solid #00FF7F;
+}
+.Eastcolor3333 {
+  color:#001EFF;
+  background-color:#00ff00;
+  padding: 15px;
+    border-right:1px solid #00FF7F;
+}
+.Eastcolor4444 {
+  color: #001EFF;
+  background-color: #00ff00;
+  padding: 15px;
+
+}
+
+
+.Northcolor1 {
+  color:white;
+  background-color: #ff964c;
+  padding: 15px;
+  margin: 0;
+  border-right:1px solid #ffba4c;
+}
+.Northcolor2 {
+  color:white;
+  background-color: #ff964c;
+  padding: 15px;
+    border-right:1px solid #ffba4c;
+}
+.Northcolor3 {
+  color:white;
+  background-color:#ff964c;
+  padding: 15px;
+    border-right:1px solid #ffba4c;
+}
+.Northcolor4 {
+  color: white;
+  background-color: #ff964c;
+  padding: 15px;
+
+}
+
+
+.Westcolor1 {
+  color:white;
+  background-color: #ff40ff;
+  padding: 15px;
+  margin: 0;
+  border-right:1px solid #f21af2;
+}
+.Westcolor2 {
+  color:white;
+  background-color: #ff40ff;
+  padding: 15px;
+    border-right:1px solid #f21af2;
+}
+.Westcolor3 {
+  color:white;
+  background-color:#ff40ff;
+  padding: 15px;
+    border-right:1px solid #f21af2;
+}
+.Westcolor4 {
+  color: white;
+  background-color: #ff40ff;
+  padding: 15px;
+
+}
+
+
+
+
+#bedoklol{
+text-decoration:none;
+color:white !important;
+}
+
+
+.test1{
+color:white;
+background-color:#134ff5;
+}
+
+.test2{
+color:black;
+background-color:#4cff87;
+}
+
+.test3{
+color:white;
+background-color:#ec841c;
+}
+
+.test4{
+color:white;
+background-color:#ff40ff;
+}
+
+.area1{
+background-color:#134ff5 !important;
+}
+
+.area2{
+
+background-color:#00cf44 !important;
+}
+
+.area3{
+background-color:#ec841c !important;
+}
+
+.area4{
+background-color:#ff8ff6 !important;
+}
+
+
+.bedokwork{
+color:#001EFF;
+}
+
+
+.container-fluid{
+    background-color:#eeeeee;
+}
+
+
+#centralcolor{
+    color:#134ff5;
+}
+
+#eastcolor{
+    color:#228B22 !important;
+}
+
+#northcolor{
+    color:#ec841c;
+}
+
+#westcolor{
+    color:#ff40ff;
+}
+</style>
+
+
+
+
+
+		<h2 style="color:#6644dd;"> Find a GP/Family Clinic Near you!  </h2>
+
+
+		<header>
+		  <h2 style="color:#6d74c9;"> Please find the list of GP/Family clinics in your area for your easy reference. </h2>
+		</header>
+
+
+		<p style="text-align:center;"> <img src="http://www.asiaone.com/static/health/polyclinic/images/poly_clinic_map.jpg"/> </p>
+
+		<div class="container">
+		  <h2 style="color:#6d74c9;"> Click onto the area that is near you to find out more about the clinics in that area! </h2>
+
+		</div>
+
+
+		<div id="tabby" class="container">
+		  <ul class="nav nav-tabs">
+			<li> <a class="test1" href="#1" data-toggle="tab"> Central </a>
+
+			</li>
+			<li> <a class="test2" href="#2" data-toggle="tab"> East </a>
+
+			</li>
+			<li><a class="test3" href="#3" data-toggle="tab"> North </a>
+
+			</li>
+
+			<li> <a class="test4" href="#4" data-toggle="tab"> West </a> </li>
+
+
+		  </ul>
+
+
+		  <div class="tab-content">
+
+
+			<!--/row-->
+
+			<div class="tab-pane active" id="1">
+			  <h3 class="area1">Central </h3>
+{% for publication in publications %}
+                  {% if  publication.get_type() == "scli" %}
+                 {% if publication.get_region()=='C' %}
+                     <div id="centralcolor" class="col-md-3">
+                         <a href="clinicinfo"> {{ publication.get_areaName() }} </a> </div>
+
+        {% endif %}
+    {% endif %}
+            {% endfor %}
+
+				</div>
+
+
+				<div class="tab-pane" id="2">
+					<h3 class="area2"> East</h3>
+
+
+{% for publication in publications %}
+                  {% if  publication.get_type() == "scli" %}
+                 {% if publication.get_region()=='E' %}
+                     <div id="eastcolor" class="col-md-3">
+                         <a href="clinicinfo"> {{ publication.get_areaName() }} </a> </div>
+
+        {% endif %}
+    {% endif %}
+            {% endfor %}
+
+
+					</div>
+
+
+
+				<div class="tab-pane" id="3">
+			  <h3 class="area3"> North </h3>
+
+                    {% for publication in publications %}
+                  {% if  publication.get_type() == "scli" %}
+                 {% if publication.get_region()=='N' %}
+                     <div id="northcolor" class="col-md-3">
+                     <a href="clinicinfo"> {{ publication.get_areaName() }} </a> </div>
+        {% endif %}
+    {% endif %}
+            {% endfor %}
+
+                </div>
+
+
+
+
+				<div class="tab-pane" id="4">
+				<h3 class="area4"> West </h3>
+
+                    {% for publication in publications %}
+                  {% if  publication.get_type() == "scli" %}
+                 {% if publication.get_region()=='W' %}
+                     <div id="westcolor" class="col-md-3">
+                         <a href="clinicinfo"> {{ publication.get_areaName() }} </a> </div>
+        {% endif %}
+    {% endif %}
+            {% endfor %}
+
+
+				</div>
+
+
+
+
+		  </div>
+
+
+
+
+		  </div>
+
+
+
+
+{% endblock %}

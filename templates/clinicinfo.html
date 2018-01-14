@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+{% block body %}
+<style>
+
+#testing1 {
+
+
+background-color:#eeeeee;
+    color:#6644dd;
+}
+
+#wholepage{
+    background-color:#eeeeee;
+
+}
+
+h2,p{
+    color:#6d74c9;
+
+}
+#icon2{
+	font-size:28px;
+	}
+</style>
+
+
+<div id="wholepage">
+
+
+
+
+    <h1 id="testing1"> <i id="icon2" class="material-icons"> info_outline </i> Clinic in Bedok </h1>
+
+
+
+
+
+
+
+
+
+
+
+
+{% for publication in publications %}
+
+<div class="clinic1">
+ {% if  publication.get_type() == "scli" %}
+
+
+
+     <h2> <i class="material-icons"> add_to_queue </i>  {{ publication.get_title() }} </h2>
+    <section>
+
+        <p> <i class="material-icons"> location_on </i> {{ publication.get_address() }} </p>
+
+        <p><i class="material-icons"> phone_in_talk </i> {{ publication.get_phone() }} </p>
+
+        <p> <i class="material-icons"> access_time </i> {{ publication.get_openingHour() }} </p>
+
+        <p> <i class="material-icons"> directions_bus </i> {{ publication.get_busNo() }} </p>
+        <p> <i class="material-icons"> directions_transit </i> {{ publication.get_mrtStation() }} </p>
+        <p>  <i class="material-icons"> local_hospital </i> {{ publication.get_hospital() }} </p>
+
+    </section>
+ {% endif %}
+</div>
+
+{% endfor %}
+
+
+</div>
+
+
+{% endblock %}

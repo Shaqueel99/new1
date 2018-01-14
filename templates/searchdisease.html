@@ -1,0 +1,377 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+
+
+<style>
+
+.content{
+margin-left:5cm;
+}
+
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+
+h3 { color:	white;
+background-color:black;
+
+
+ }
+
+ul.meateaters {
+	list-style-type: none; /* remove default bullet */
+	margin: 16px 0;
+  padding-left: 2em;
+}
+.meateaters li {
+	font-size: 20px;
+	line-height: 1.25em;
+	padding: 0 0 1.25em 1.6em; /* match the icon width */
+  text-indent: -1.6em;    /* match the icon width */
+  margin-left:20px;
+}
+.meateaters li::before {
+	font-family: FontAwesome;
+	color: lime;
+  content: "\f06c"; /* escaped unicode for the icon */
+  float: left;
+  width: 1.6em; /* icon width + space */
+}
+.meateaters li strong {
+  color:lime;
+}
+
+.diabetes{
+color:lime;
+}
+
+h1{
+margin-left:190px;
+color:	red;
+}
+
+.test1{
+margin-left:40px;
+}
+
+
+
+.material-icons{
+ font-size:26px;
+ color:#6644dd;
+ }
+
+ a{
+ color:lime;
+ }
+
+
+ .decoratethis{
+ color:#6644dd;
+ }
+
+.container-fluid{
+    background-color:#eeeeee;
+}
+</style>
+
+
+  </head>
+
+
+<body>
+
+     <h1> <a href="#" class="decoratethis">  Alphabetical Search </a> <i class="large material-icons"> search </i> </h1>
+
+    <div role="main" class="content">
+
+  <div class="row">
+	<div class="l-content  block  __text">
+
+
+		<h2><strong><a href="#a">A</a>&nbsp;<a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> <a href="#F">F</a> <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> <a href="#N">N</a> <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> <a href="#U">U</a> <a href="#V">V</a> <a href="#w">W</a> <a href="#X">X</a> <a href="#Y">Y</a> <a href="#Z">Z</a></strong></h2>
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+<h3 class="test1"> <strong><a name="a"></a> Result starting with A</strong></h3>
+ <ul class="meateaters">
+  <a href="$"> <li> <strong> Achilles Tendonitis </strong> </li>
+  <li>  <strong> Arthritis </strong>   </li>  </a>
+     {% for publication in publications %}
+                  {% if  publication.get_type() == "sdis" %}
+                      {% if publication.get_title()[0]=='A'%}
+                          <a href="$"> <strong> <li> {{ publication.get_title() }} </strong> </li> </a>
+                          {% endif %}
+    {% endif %}
+            {% endfor %}
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+
+<h3><strong><a name="b"></a> Result starting with B</strong></h3>
+ <a href="$"> <li> <strong> Blood Cancer (Leukaemia) </strong> </li>
+  <li>  <strong> Breast Cancer </strong>   </li>  </a>
+
+
+
+
+
+
+
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+
+
+<h3><strong><a name="C"></a> Result starting with C</strong></h3>
+
+<a href="$">
+ <li> <strong> Cancer (Oncology) </strong> </li>
+  <li>  <strong> Corrective Spine Osteotomy  </strong>   </li>
+   <li> <strong> Carpal Tunnel Syndrome </strong> </li>
+   <li> <strong> Congenital Heart Disease </strong> </li> </a>
+
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+<h3><strong><a name="D"></a>Result starting with D</strong></h3>
+
+<a href="$">
+		 <li> <strong> Decompression Laminectomy </strong> </li>  </a>
+  <a href="$"> <li>  <strong> Dementia  </strong>   </li> </a>
+
+   <a href="$"> <li> <strong> Degenerative Spine Conditions  </strong> </li> </a>
+  <a href="$"> <li> <strong> DeQuervain Tenosynovitis </strong> </li>   </a>
+ {% for publication in publications %}
+                  {% if  publication.get_type() == "sdis" %}
+                      {% if publication.get_title()[0]=='D'%}
+                   <a href="diseaseinfo"> <strong> <li> {{ publication.get_title() }} </strong> </li> </a>
+                          {% endif %}
+    {% endif %}
+            {% endfor %}
+
+
+
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+<h3><strong><a name="E"></a>Result starting with E</strong></h3>
+
+<a href="$">
+    <li> <strong> Ear, Nose & Throat (Otorhinolaryngology) </strong> </li>
+  <li>  <strong> Eyes (Ophthalmology)  </strong>   </li>
+   <li> <strong> Epilepsy  </strong> </li>  </a>
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+
+<h3><strong><a name="F"></a>Result starting with F</strong></h3>
+  <li> <strong> Flexible Pleuroscopy </strong> </li>
+  <li> <strong> Foot Pain (Plantar Fasciitis) </strong> </li>
+  <li> <strong> Fractures </strong> </li>
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+
+
+
+<h3><strong><a name="G"></a>Result starting with G</strong></h3>
+  <li> <strong> Gallstones </strong> </li>
+  <li> <strong> Gastritis </strong> </li>
+  <li> <strong> Golfer’s Elbow  </strong> </li>
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><a name="H"></a>Result starting with H</strong></p>
+	  <li> <strong> Hand Trauma </strong> </li>
+  <li> <strong> Hearing Loss </strong> </li>
+  <li> <strong> Heart Attack  </strong> </li>
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+
+<p><strong> <a name="I">Result starting with I </a></strong></p>
+		  <li> <strong> Insulin Administration  </strong> </li>
+  <li> <strong> Irritable Bowel Syndrome (IBS)  </strong> </li>
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+
+<p><strong><a name="J"></a>J</strong></p>
+
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+<p><strong><a name="K"></a>Result starting with K</strong></p>
+				  <li> <strong> Kidney Cancer  </strong> </li>
+  <li> <strong> Knee Arthritis   </strong> </li>
+
+
+
+
+
+<p><strong><a name="L"></a> Result starting with L</strong></p>
+			  <li> <strong> Liver Cancer  </strong> </li>
+  <li> <strong> Lung Cancer    </strong> </li>
+
+
+
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+<p><strong><a name="M"></a>Result starting with M</strong></p>
+		  <li> <strong> Macular Degeneration  </strong> </li>
+  <li> <strong> Meniscus Tear     </strong> </li>
+
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+
+<p><strong><a name="N"></a>Result starting with N</strong></p>
+ <li> <strong> Nasopharynx (Nose) Cancer  </strong> </li>
+  <li> <strong> Neonatology     </strong> </li>
+
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+<p><strong><a name="O"></a>Result starting with O</strong></p>
+		 <li> <strong> Orthopaedic Rehabilitation  </strong> </li>
+  <li> <strong> Osteoporosis     </strong> </li>
+
+
+
+
+
+<p><strong><a name="P"></a>Result starting with P</strong></p>
+					 <li> <strong> Pancreatic Cancer   </strong> </li>
+  <li> <strong> Parkinson’s Disease     </strong> </li>
+
+
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+<p><strong><a name="Q"></a>Result starting with Q</strong></p>
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+<p><strong><a name="R"></a>Result starting with R</strong></p>
+
+<p><strong>&nbsp;</strong></p>
+
+
+<p><strong><a name="S"></a>Result starting with S</strong></p>
+	 <li> <strong> Scoliosis    </strong> </li>
+  <li> <strong> Stomach cancer </strong> </li>
+
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+<p><strong><a name="T"></a>Result starting with T</strong></p>
+			 <li> <strong> Tennis Elbow    </strong> </li>
+  <li> <strong> Tinnitus </strong> </li>
+
+
+
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+<p><strong><a name="U"></a>Result starting with U</strong></p>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><a name="V"></a>Result starting with V</strong></p>
+<p><strong>&nbsp;</strong></p>
+
+
+<p><strong><a name="w"></a>Result starting with W</strong></p>
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><a name="X"></a>Result starting with X</strong></p>
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><a name="Y"></a>Result starting with Y</strong></p>
+<p><strong>&nbsp;</strong></p>
+
+<p><strong><a name="Z"></a>Result starting with Z</strong></p>
+
+
+
+
+</ul>
+
+
+
+	</div>
+</div>
+      </div>
+
+{% endblock %}
